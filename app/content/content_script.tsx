@@ -25,16 +25,39 @@ container.className = style({
         }
     }
 });
+const styleFixes = {
+    'stackexchange': `
+    .top-bar {
+        top: ${height}px !important;
+    }
+    .container {
+        position: relative;
+        top: ${height}px !important; 
+    }
+    `,
+    'stackoverflow': `
+    .top-bar {
+        top: ${height}px !important;
+    }
+    body {
+        position: relative;
+        top: ${height}px !important; 
+    }
+    `
+};
 const fixStyle = document.createElement('style');
-fixStyle.innerHTML = `
-.top-bar {
-    top: ${height}px !important; /* Fix for stackoverflow */
-}
-body {
-    position: relative;
-    top: ${height}px !important;
-}
-`;
+fixStyle.innerHTML = ((location) => {
+    return Object.keys(styleFixes).reduce((res, k) => {
+        if (res) return res;
+        if (location.origin.includes(k)) return styleFixes[k];
+        return '';
+    }, '') || `
+        body {
+            position: relative;
+            top: ${height}px !important; 
+        }
+    `;
+})(window.location);
 document.head.appendChild(fixStyle);
 
 /*

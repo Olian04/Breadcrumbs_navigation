@@ -1,1 +1,3 @@
-console.log('Content');
+window.onload = () => {
+    console.log('Content on load');
+}

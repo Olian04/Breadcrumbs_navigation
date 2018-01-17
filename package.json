@@ -13,7 +13,12 @@
   "repository": "git@github.com:Olian04/Breadcrumbs_navigation.git",
   "dependencies": {
     "@types/lodash": "^4.14.92",
-    "lodash": "^4.17.4"
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "lodash": "^4.17.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "typestyle": "^1.6.0"
   },
   "devDependencies": {
     "@types/chrome": "~0.0.58",

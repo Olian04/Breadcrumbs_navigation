@@ -5,10 +5,11 @@ mix.copy('app/manifest.json', 'dist/')
     .copy('app/options/options.html', 'dist/')
     .copy('app/popup/popup.html', 'dist/')
     .ts('app/background/background.ts', 'dist/')
-    .ts('app/content/content_script.ts', 'dist/')
+    .ts('app/content/content_script.tsx', 'dist/')
     .ts('app/options/options.ts', 'dist/')
     .ts('app/popup/popup.ts', 'dist/')
-    .extract([ 'lodash' ], 'dist/vendor.js')
+    .extract([ 'lodash', 'react', 'react-dom', 'typestyle' ], 'dist/vendor.js')
+    .sourceMaps(true)
     .disableNotifications();
 
 // Full API

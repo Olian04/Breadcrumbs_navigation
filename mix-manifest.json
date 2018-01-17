@@ -1,8 +1,8 @@
 {
     "/dist/vendor.js": "/dist/vendor.js",
+    "/dist/content_script.js": "/dist/content_script.js",
     "/dist/popup.js": "/dist/popup.js",
     "/dist/options.js": "/dist/options.js",
-    "/dist/content_script.js": "/dist/content_script.js",
     "/dist/background.js": "/dist/background.js",
     "/dist/manifest.js": "/dist/manifest.js",
     "/dist/manifest.json": "/dist/manifest.json",

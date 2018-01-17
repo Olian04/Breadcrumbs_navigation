@@ -1,0 +1,12 @@
+{
+    "/dist/vendor.js": "/dist/vendor.js",
+    "/dist/popup.js": "/dist/popup.js",
+    "/dist/options.js": "/dist/options.js",
+    "/dist/content_script.js": "/dist/content_script.js",
+    "/dist/background.js": "/dist/background.js",
+    "/dist/manifest.js": "/dist/manifest.js",
+    "/dist/manifest.json": "/dist/manifest.json",
+    "/dist/icon.png": "/dist/icon.png",
+    "/dist/options.html": "/dist/options.html",
+    "/dist/popup.html": "/dist/popup.html"
+}

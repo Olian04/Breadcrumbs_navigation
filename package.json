@@ -1,0 +1,24 @@
+{
+  "name": "Breadcrumbs_navigation",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "yarn watch",
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Olian04",
+  "license": "MIT",
+  "repository": "git@github.com:Olian04/Breadcrumbs_navigation.git",
+  "dependencies": {
+    "@types/lodash": "^4.14.92",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/chrome": "~0.0.58",
+    "laravel-mix": "^1.7.2",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2"
+  }
+}

@@ -6,7 +6,7 @@ _[Breadcrumbs?](https://en.wikipedia.org/wiki/Breadcrumb_(navigation))_
 
 Since chrome doesn't allow extensions to modify the address bar, the breadcrumb navigation will be inlined at the top of each page.
 
-Design WIP: https://jsfiddle.net/b0rn0rsv/7/
+Design WIP: https://jsfiddle.net/b0rn0rsv/21/
 
 ## MVP
 - [ ] Display a segmented view of the current url.

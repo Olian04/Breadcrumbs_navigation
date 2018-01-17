@@ -2,11 +2,18 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { style } from 'typestyle';
 
+import { getStyleFix } from './styleFixes';
+
 const height = 25;
-const container = document.createElement('div');
-document.body.insertBefore(container, document.body.firstChild);
+
+const fixStyle = document.createElement('style');
+fixStyle.innerHTML = getStyleFix(location.origin, height);
+document.head.appendChild(fixStyle);
+
+const container = document.createElement('div'); // The root element
+document.body.insertBefore(container, document.body.firstChild); // First in body
 container.className = style({
-    position: 'fixed',
+    position: 'sticky',
     top: '0px',
     width: '100vw',
     height: height,
@@ -25,50 +32,8 @@ container.className = style({
         }
     }
 });
-const styleFixes = {
-    'stackexchange': `
-    .top-bar {
-        top: ${height}px !important;
-    }
-    .container {
-        position: relative;
-        top: ${height}px !important; 
-    }
-    `,
-    'stackoverflow': `
-    .top-bar {
-        top: ${height}px !important;
-    }
-    body {
-        position: relative;
-        top: ${height}px !important; 
-    }
-    `
-};
-const fixStyle = document.createElement('style');
-fixStyle.innerHTML = ((location) => {
-    return Object.keys(styleFixes).reduce((res, k) => {
-        if (res) return res;
-        if (location.origin.includes(k)) return styleFixes[k];
-        return '';
-    }, '') || `
-        body {
-            position: relative;
-            top: ${height}px !important; 
-        }
-    `;
-})(window.location);
-document.head.appendChild(fixStyle);
 
 /*
-.sbb>* {
-    position: relative;
-    display: inline-block;
-    height: var(--crumb-height);
-    padding: 0;
-    margin: 0;
-    padding-bottom: 2px;
-}
 .sbb > .crumb > span {
     position: relative;
     top: -10%;
